@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support Doctorat — Analyse statistique &amp; accompagnement doctoral</title>
+<meta name="description" data-i18n="meta.desc" content="Analyse statistique, méthodologie, rédaction et mise en forme de thèses. Accompagnement des doctorants. Meknès, Maroc.">
+<meta name="theme-color" content="#0A0B1E">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Manrope:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ambiance : halos de profondeur + grain -->
+<div class="ambient" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="grid-floor"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="brand-txt">
+        <b data-i18n="brand.name">Support Doctorat</b>
+        <i data-i18n="brand.tag">Analyse statistique</i>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation">
+      <a href="#services" data-i18n="nav.services">Prestations</a>
+      <a href="#methode" data-i18n="nav.method">Déroulement</a>
+      <a href="#domaines" data-i18n="nav.fields">Domaines</a>
+      <a href="tests.html" data-i18n="nav.tests">Catalogue</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="fr" class="is-on">FR</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="ar">ع</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy reveal">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Meknès, Maroc · à distance partout</p>
+      <h1 data-i18n="hero.title" data-i18n-html>Votre thèse mérite des <em>chiffres solides</em>.</h1>
+      <p class="lede" data-i18n="hero.lede">J'accompagne les doctorants, internes et étudiants en master sur la partie qui bloque : plan d'analyse, statistiques, tableaux, figures et mise en forme du manuscrit.</p>
+
+      <div class="actions">
+        <a class="btn btn-wa" data-wa href="https://wa.me/212675992835" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          <span data-i18n="hero.cta1">Écrire sur WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" href="#services" data-i18n="hero.cta2">Voir les prestations</a>
+      </div>
+
+      <p class="assur" data-i18n="hero.assur">Premier échange et devis gratuits · Réponse sous 24 h</p>
+    </div>
+
+    <!-- ============ objet 3D : la console de résultats ============ -->
+    <div class="stage reveal">
+      <div class="deck" id="deck">
+        <div class="deck-glow" aria-hidden="true"></div>
+
+        <div class="panel panel-main">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <span data-i18n="plate.cap">Sortie d'analyse — échantillon apparié</span>
+          </div>
+          <svg viewBox="0 0 400 200" role="img" aria-label="Courbe de distribution avec zone de significativité">
+            <defs>
+              <linearGradient id="gTail" x1="0" x2="1">
+                <stop offset="0" stop-color="#FFB86B" stop-opacity=".15"/>
+                <stop offset="1" stop-color="#FFB86B" stop-opacity=".85"/>
+              </linearGradient>
+              <linearGradient id="gCurve" x1="0" x2="1">
+                <stop offset="0" stop-color="#35D6E8"/>
+                <stop offset="1" stop-color="#7B61FF"/>
+              </linearGradient>
+            </defs>
+            <line class="axis" x1="18" y1="164" x2="384" y2="164"/>
+            <path class="tail" d="M310 142 C328 155 346 164 366 164 L310 164 Z"/>
+            <path class="curve" d="M22 164 C 92 164 132 40 200 40 C 268 40 308 164 378 164"/>
+            <line class="tick" x1="310" y1="164" x2="310" y2="172"/>
+            <line class="tick" x1="200" y1="164" x2="200" y2="172"/>
+            <text class="lab" x="192" y="188">x̄</text>
+            <text class="lab lab-hi" x="286" y="188" data-i18n="plate.threshold">seuil</text>
+          </svg>
+          <div class="panel-foot">
+            <span>SPSS · R · Python</span>
+            <span>LaTeX · Word · Zotero</span>
+          </div>
+        </div>
+
+        <div class="chip chip-1"><b>p</b> = 0,003</div>
+        <div class="chip chip-2"><b>n</b> = 136</div>
+        <div class="chip chip-3"><b data-i18n="plate.ci">IC</b> 95 %</div>
+
+        <div class="panel panel-mini">
+          <div class="mini-row"><span data-i18n="plate.r1">Groupe A</span><span>24,8 ± 3,1</span></div>
+          <div class="mini-row"><span data-i18n="plate.r2">Groupe B</span><span>19,2 ± 2,7</span></div>
+          <div class="mini-row is-hi"><span data-i18n="plate.r3">Différence</span><span>+5,6</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PRESTATIONS ============ -->
+<section id="services" class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal"><b class="num">01</b> <span data-i18n="s1.eyebrow">Prestations</span></p>
+    <h2 class="reveal" data-i18n="s1.title">Là où les thèses coincent</h2>
+    <p class="intro reveal" data-i18n="s1.intro">Vous prenez ce dont vous avez besoin, pas un forfait. Chaque livrable est expliqué pour que vous puissiez le défendre vous-même devant le jury.</p>
+
+    <div class="cards">
+      <article class="card tilt reveal">
+        <span class="card-n">1.1</span>
+        <h3 data-i18n="s1.c1.t">Plan d'analyse</h3>
+        <p data-i18n="s1.c1.d">Avant la collecte : quelles variables, quel test, quelle taille d'échantillon. L'étape qui évite de tout refaire.</p>
+        <ul class="tags"><li data-i18n="s1.c1.g1">Puissance</li><li data-i18n="s1.c1.g2">Choix des tests</li><li data-i18n="s1.c1.g3">Grille de saisie</li></ul>
+      </article>
+
+      <article class="card tilt reveal">
+        <span class="card-n">1.2</span>
+        <h3 data-i18n="s1.c2.t">Analyse statistique</h3>
+        <p data-i18n="s1.c2.d">Nettoyage des données, descriptif, tests comparatifs, régressions, analyse de survie, ACP. Sorties brutes et interprétation rédigée.</p>
+        <ul class="tags"><li>SPSS</li><li>R</li><li>Python</li><li>Jamovi</li></ul>
+      </article>
+
+      <article class="card tilt reveal">
+        <span class="card-n">1.3</span>
+        <h3 data-i18n="s1.c3.t">Revue systématique</h3>
+        <p data-i18n="s1.c3.d">Équation de recherche, sélection des études, tableau d'extraction, diagramme PRISMA et méta-analyse si les données le permettent.</p>
+        <ul class="tags"><li>PRISMA</li><li>PubMed</li><li>Forest plot</li></ul>
+      </article>
+
+      <article class="card tilt reveal">
+        <span class="card-n">1.4</span>
+        <h3 data-i18n="s1.c4.t">Figures &amp; mise en forme</h3>
+        <p data-i18n="s1.c4.d">Figures haute résolution, tableaux aux normes, sommaire automatique, pagination et modèle imposé par la faculté.</p>
+        <ul class="tags"><li>LaTeX</li><li>Word</li><li>Matplotlib</li><li>RTL</li></ul>
+      </article>
+
+      <article class="card tilt reveal">
+        <span class="card-n">1.5</span>
+        <h3 data-i18n="s1.c5.t">Bibliographie vérifiée</h3>
+        <p data-i18n="s1.c5.d">Chaque référence contrôlée à la source : auteurs, année, pagination, DOI. Style Vancouver, APA ou celui de votre établissement.</p>
+        <ul class="tags"><li>Zotero</li><li>BibTeX</li><li>DOI</li></ul>
+      </article>
+
+      <article class="card tilt reveal">
+        <span class="card-n">1.6</span>
+        <h3 data-i18n="s1.c6.t">Soutenance &amp; article</h3>
+        <p data-i18n="s1.c6.d">Diaporama construit sur vos résultats, répétition des questions du jury, et transformation d'un chapitre en article IMRAD.</p>
+        <ul class="tags"><li data-i18n="s1.c6.g1">Diaporama</li><li>IMRAD</li><li data-i18n="s1.c6.g2">Questions du jury</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DÉROULEMENT ============ -->
+<section id="methode" class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal"><b class="num">02</b> <span data-i18n="s2.eyebrow">Déroulement</span></p>
+    <h2 class="reveal" data-i18n="s2.title">Comment on travaille</h2>
+    <p class="intro reveal" data-i18n="s2.intro">Le même ordre à chaque fois. Vous savez ce que vous payez et quand vous le recevez avant que ça commence.</p>
+
+    <ol class="steps">
+      <li class="step reveal"><span class="step-n">01</span>
+        <div><h3 data-i18n="s2.p1.t">Vous écrivez sur WhatsApp</h3><p data-i18n="s2.p1.d">Votre sujet, votre échéance, où vous en êtes. Joignez le fichier de données ou le chapitre si vous l'avez.</p></div></li>
+      <li class="step reveal"><span class="step-n">02</span>
+        <div><h3 data-i18n="s2.p2.t">Diagnostic gratuit</h3><p data-i18n="s2.p2.d">Je regarde vos données ou votre texte et je vous dis ce qui est faisable, ce qui ne l'est pas, et ce que je ferais à votre place.</p></div></li>
+      <li class="step reveal"><span class="step-n">03</span>
+        <div><h3 data-i18n="s2.p3.t">Devis et délai fixes</h3><p data-i18n="s2.p3.d">Un prix, une date de livraison, une liste précise de ce qui est inclus. Rien ne démarre avant votre accord.</p></div></li>
+      <li class="step reveal"><span class="step-n">04</span>
+        <div><h3 data-i18n="s2.p4.t">Livraison expliquée</h3><p data-i18n="s2.p4.d">Vous recevez les fichiers sources et une note qui explique chaque résultat simplement, pour que vous puissiez répondre au jury.</p></div></li>
+      <li class="step reveal"><span class="step-n">05</span>
+        <div><h3 data-i18n="s2.p5.t">Révisions incluses</h3><p data-i18n="s2.p5.d">Votre directeur demande des modifications ? Les ajustements sur le travail livré sont compris dans le prix.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ DOMAINES ============ -->
+<section id="domaines" class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal"><b class="num">03</b> <span data-i18n="s3.eyebrow">Domaines</span></p>
+    <h2 class="reveal" data-i18n="s3.title">Terrains déjà pratiqués</h2>
+    <p class="intro reveal" data-i18n="s3.intro">Des travaux menés avec des doctorants et des internes d'universités marocaines, en médecine comme en sciences humaines.</p>
+
+    <div class="fields">
+      <div class="field tilt reveal"><h3 data-i18n="s3.f1.t">Médecine &amp; santé publique</h3><p data-i18n="s3.f1.d">Études cliniques et épidémiologiques, cas-témoins, cohortes, mémoires d'internat, questionnaires patients et professionnels.</p></div>
+      <div class="field tilt reveal"><h3 data-i18n="s3.f2.t">Économie &amp; gestion</h3><p data-i18n="s3.f2.d">Économétrie sur données de panel, séries temporelles, tests de robustesse, modèles de performance d'entreprise.</p></div>
+      <div class="field tilt reveal"><h3 data-i18n="s3.f3.t">Sciences de l'éducation</h3><p data-i18n="s3.f3.d">Enquêtes par questionnaire, échelles validées, analyse factorielle, comparaisons de groupes d'élèves ou d'enseignants.</p></div>
+      <div class="field tilt reveal"><h3 data-i18n="s3.f4.t">Agronomie &amp; sciences sociales</h3><p data-i18n="s3.f4.d">Enquêtes de terrain, indices composites, statistiques spatiales et cartographie des résultats.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section section-contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <p class="eyebrow"><b class="num">04</b> <span data-i18n="s4.eyebrow">Contact</span></p>
+      <h2 data-i18n="s4.title">Parlons de votre thèse</h2>
+      <p class="intro" data-i18n="s4.intro">Le plus simple est WhatsApp : envoyez votre sujet et votre échéance, je réponds avec une première évaluation. Le diagnostic ne coûte rien.</p>
+      <a class="btn btn-wa btn-big" data-wa href="https://wa.me/212675992835" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          <span>+212 675 99 28 35</span>
+      </a>
+    </div>
+
+    <div class="info tilt reveal">
+      <div class="line"><span data-i18n="s4.l1">WhatsApp</span><a href="https://wa.me/212675992835" target="_blank" rel="noopener">+212 675 99 28 35</a></div>
+      <div class="line"><span data-i18n="s4.l2">Téléphone</span><a href="tel:+212675992835">06 75 99 28 35</a></div>
+      <div class="line"><span data-i18n="s4.l3">Base</span><span data-i18n="s4.v3">Meknès, Maroc</span></div>
+      <div class="line"><span data-i18n="s4.l4">Travail</span><span data-i18n="s4.v4">À distance, tout le Maroc</span></div>
+      <div class="line"><span data-i18n="s4.l5">Langues</span><span>Français · العربية · English</span></div>
+      <div class="line"><span data-i18n="s4.l6">Réponse</span><span data-i18n="s4.v6">Sous 24 h</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span data-i18n="foot.left">© 2026 Support Doctorat — Analyse statistique &amp; accompagnement doctoral</span>
+    <span data-i18n="foot.right">Meknès, Maroc</span>
+  </div>
+</footer>
+
+<a class="float" data-wa href="https://wa.me/212675992835" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  <span data-i18n="float">WhatsApp</span>
+</a>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue des analyses — SPSS &amp; économétrie | Support Doctorat</title>
+<meta name="description" content="Tous les tests réalisables sous SPSS, leur chemin dans les menus, leurs conditions d'application et leurs alternatives. Plus l'estimation par GMM et l'économétrie des panels.">
+<meta name="theme-color" content="#0A0B1E">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Manrope:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ---------- outils propres au catalogue ---------- */
+.back{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--txt-2);text-decoration:none}
+.back:hover{color:var(--cyan)}
+.tools{
+  position:sticky;top:62px;z-index:20;padding:16px 0 14px;margin-bottom:34px;
+  background:rgba(10,11,30,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.search{
+  display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;
+  border:1px solid var(--line-2);background:var(--glass);margin-bottom:12px;
+}
+.search svg{width:17px;height:17px;fill:var(--txt-2);flex:none}
+.search input{
+  flex:1;border:0;background:transparent;color:var(--txt);font-family:var(--body);
+  font-size:15.5px;outline:none;min-width:0;
+}
+.search input::placeholder{color:var(--txt-2)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip-f{
+  border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--txt-2);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;padding:7px 13px;
+  border-radius:999px;cursor:pointer;transition:.2s;
+}
+.chip-f:hover{color:var(--txt);border-color:var(--line-2)}
+.chip-f.on{background:linear-gradient(135deg,var(--cyan),var(--violet));color:#08091A;border-color:transparent;font-weight:500}
+.count{font-family:var(--mono);font-size:11.5px;color:var(--txt-2);margin-top:12px}
+
+.grid-t{display:grid;gap:14px}
+@media(min-width:720px){.grid-t{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.grid-t{grid-template-columns:repeat(3,1fr)}}
+.t{
+  padding:20px 20px 18px;border-radius:16px;border:1px solid var(--line);
+  background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.02));
+  display:flex;flex-direction:column;gap:9px;
+}
+.t-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.t h3{font-size:17.5px;letter-spacing:-.015em;line-height:1.25}
+.t-cat{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);white-space:nowrap}
+.t-q{font-size:14.5px;color:var(--txt-2);margin:0}
+.t-p{
+  font-family:var(--mono);font-size:11.5px;color:var(--amber);line-height:1.6;
+  padding:9px 11px;border-radius:9px;background:rgba(255,184,107,.07);
+  border:1px solid rgba(255,184,107,.18);word-break:break-word;
+}
+.t-x{font-size:13px;color:var(--txt-2);margin:0;padding-inline-start:14px;position:relative}
+.t-x::before{content:"";position:absolute;inset-inline-start:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--violet)}
+.t-x.alt::before{background:var(--amber)}
+.t-x b{color:var(--txt);font-weight:500}
+.empty{padding:40px 0;color:var(--txt-2);font-family:var(--mono);font-size:13px}
+
+/* ---------- bloc GMM ---------- */
+.gmm{margin-top:26px}
+.flow{display:grid;gap:14px;margin:30px 0}
+@media(min-width:820px){.flow{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+.fstep{
+  position:relative;padding:22px 20px;border-radius:16px;border:1px solid var(--line);
+  background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+}
+.fstep b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.fstep h4{font-family:var(--display);font-size:17px;margin:0 0 8px;font-weight:700}
+.fstep p{margin:0;font-size:14.5px;color:var(--txt-2)}
+@media(min-width:820px){
+  .fstep:not(:last-child)::after{
+    content:"";position:absolute;inset-inline-end:-11px;top:50%;width:16px;height:16px;
+    border-top:1px solid var(--line-2);border-inline-end:1px solid var(--line-2);
+    transform:translateY(-50%) rotate(45deg);
+  }
+}
+.formula{
+  font-family:var(--mono);font-size:14px;color:var(--txt);text-align:center;
+  padding:22px 18px;border-radius:16px;overflow-x:auto;white-space:nowrap;
+  border:1px solid var(--line-2);background:rgba(123,97,255,.09);margin:0 0 12px;
+}
+.formula small{display:block;white-space:normal;font-family:var(--body);font-size:13.5px;color:var(--txt-2);margin-top:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:8px}
+.tbl th,.tbl td{text-align:start;padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt-2);font-weight:400}
+.tbl td:first-child{font-family:var(--mono);font-size:12.5px;color:var(--amber);white-space:nowrap}
+.tbl td{color:var(--txt-2)}
+.tbl-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:4px 18px 8px}
+.note{
+  border-inline-start:2px solid var(--amber);padding:14px 0 14px 18px;margin:26px 0;
+  color:var(--txt-2);font-size:15px;max-width:70ch;
+}
+html[dir="rtl"] .note{padding:14px 18px 14px 0}
+.note b{color:var(--txt);font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span>
+  <span class="grid-floor"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-txt"><b>Support Doctorat</b><i>Catalogue des analyses</i></span>
+    </a>
+    <a class="back" href="index.html">← Accueil</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:64px 0 20px">
+  <div class="wrap">
+    <p class="eyebrow"><b class="num">§</b> <span>Référence</span></p>
+    <h1 style="max-width:16ch">Ce qui se fait, et <em>où le trouver</em>.</h1>
+    <p class="lede" style="max-width:60ch">Chaque analyse disponible sous SPSS : la question à laquelle elle répond, le chemin exact dans les menus, la condition qui doit tenir, et l'alternative quand elle ne tient pas. Puis l'économétrie, GMM compris, qui se traite ailleurs.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+
+    <div class="tools">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 1 0 4.9 14.32l5.39 5.39 1.42-1.42-5.39-5.39A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"/></svg>
+        <input id="q" type="search" placeholder="Chercher : Mann-Whitney, ANOVA, Cox, alpha, ROC…" aria-label="Chercher un test">
+      </label>
+      <div class="chips" id="filters"></div>
+      <p class="count" id="count"></p>
+    </div>
+
+    <div class="grid-t" id="grid"></div>
+    <p class="empty" id="empty" hidden>Aucun test ne correspond. Essayez un autre mot — ou écrivez-moi, certaines analyses passent par des extensions.</p>
+  </div>
+</section>
+
+<!-- ==================== GMM ==================== -->
+<section class="section gmm" id="gmm">
+  <div class="wrap">
+    <p class="eyebrow reveal"><b class="num">GMM</b> <span>Méthode des moments généralisés</span></p>
+    <h2 class="reveal">Quand la régression classique ne suffit plus</h2>
+    <p class="intro reveal">La méthode des moments généralisés (Hansen, 1982) estime un modèle sans supposer la loi des erreurs. Elle s'impose dès que l'hypothèse d'exogénéité tombe : variable explicative corrélée au terme d'erreur, causalité inverse, variable omise, ou retard de la variable dépendante dans un panel.</p>
+
+    <div class="flow">
+      <div class="fstep reveal">
+        <b>Étape 1</b>
+        <h4>Conditions de moment</h4>
+        <p>On écrit ce que la théorie impose : l'instrument n'est pas corrélé à l'erreur, soit E[g(θ, xᵢ)] = 0. Il faut au moins autant de conditions que de paramètres.</p>
+      </div>
+      <div class="fstep reveal">
+        <b>Étape 2</b>
+        <h4>Matrice de pondération</h4>
+        <p>Quand les conditions sont plus nombreuses que les paramètres, on ne peut pas toutes les satisfaire. W arbitre entre elles ; la W optimale donne l'estimateur le plus efficace.</p>
+      </div>
+      <div class="fstep reveal">
+        <b>Étape 3</b>
+        <h4>Minimisation</h4>
+        <p>On retient le θ qui rapproche le plus les moments empiriques de zéro. En une étape, deux étapes, ou de façon itérative jusqu'à convergence.</p>
+      </div>
+    </div>
+
+    <div class="formula reveal">
+      θ̂ = arg min<sub>θ</sub> &nbsp;[ ḡ(θ) ]′ &nbsp;W&nbsp; [ ḡ(θ) ] &nbsp;&nbsp;avec&nbsp;&nbsp; ḡ(θ) = (1/n) Σ g(θ, xᵢ)
+      <small>Cas particuliers : si les moments sont exactement identifiés, on retrouve la méthode des moments simple ; avec les bons instruments et W adaptée, on retrouve les MCO puis les doubles moindres carrés (2SLS).</small>
+    </div>
+
+    <h3 style="font-size:22px;margin:44px 0 10px" class="reveal">Les trois variantes qu'on rencontre en thèse</h3>
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead><tr><th>Variante</th><th>Situation typique</th><th>Ce qu'elle corrige</th></tr></thead>
+        <tbody>
+          <tr><td>GMM en coupe</td><td>Données transversales, une variable explicative endogène (dépense de santé, prix, effort déclaré).</td><td>Endogénéité et hétéroscédasticité de forme inconnue, sans supposer la normalité.</td></tr>
+          <tr><td>GMM en différences<br>(Arellano-Bond, 1991)</td><td>Panel dynamique : la variable dépendante retardée figure parmi les explicatives, T court et N grand.</td><td>Le biais de Nickell dû aux effets fixes ; les retards en niveau servent d'instruments.</td></tr>
+          <tr><td>GMM système<br>(Blundell-Bond, 1998)</td><td>Même cas, mais séries persistantes : les retards sont de mauvais instruments pour les différences.</td><td>La faiblesse des instruments ; on empile l'équation en niveau et celle en différences.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:22px;margin:44px 0 10px" class="reveal">La validation qu'un jury demandera</h3>
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead><tr><th>Test</th><th>Ce qu'il vérifie</th><th>Résultat souhaité</th></tr></thead>
+        <tbody>
+          <tr><td>Hansen J / Sargan</td><td>Validité conjointe des instruments (suridentification).</td><td>p &gt; 0,05 — mais méfiance si p ≈ 1,000 : trop d'instruments.</td></tr>
+          <tr><td>AR(1) et AR(2)</td><td>Autocorrélation des résidus en différences première.</td><td>AR(1) significatif, AR(2) non significatif.</td></tr>
+          <tr><td>Différence de Hansen</td><td>Validité du sous-ensemble d'instruments propre au GMM système.</td><td>p &gt; 0,05.</td></tr>
+          <tr><td>Règle du nombre</td><td>Nombre d'instruments comparé au nombre de groupes.</td><td>Instruments ≤ nombre de pays ou d'individus.</td></tr>
+          <tr><td>Kleibergen-Paap<br>Stock-Yogo</td><td>Force des instruments en coupe (F de première étape).</td><td>F &gt; 10 en règle usuelle.</td></tr>
+          <tr><td>Hausman</td><td>Effets fixes contre effets aléatoires, avant même d'aller au GMM.</td><td>p &lt; 0,05 → effets fixes.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note reveal">
+      <b>Point d'honnêteté : SPSS ne fait pas de GMM.</b> Il n'y a pas de menu pour cela, et aucune extension officielle ne le propose. SPSS s'arrête aux doubles moindres carrés (Analyze → Regression → 2-Stage Least Squares), qui traitent l'endogénéité sous hypothèse d'homoscédasticité. Dès qu'il faut du GMM, on passe à <b>Stata</b> (<span style="font-family:var(--mono);font-size:13px">ivregress gmm</span>, <span style="font-family:var(--mono);font-size:13px">xtabond2</span>), à <b>EViews</b>, à <b>R</b> (paquets <span style="font-family:var(--mono);font-size:13px">gmm</span>, <span style="font-family:var(--mono);font-size:13px">plm</span>, <span style="font-family:var(--mono);font-size:13px">momentfit</span>) ou à <b>Python</b> (<span style="font-family:var(--mono);font-size:13px">linearmodels</span>). Je livre le dossier de réplication avec le code commenté, la sortie et son interprétation, quel que soit le logiciel.
+    </div>
+
+    <h3 style="font-size:22px;margin:44px 0 10px" class="reveal">Autour du GMM, l'économétrie qui va avec</h3>
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead><tr><th>Famille</th><th>Méthodes</th><th>Logiciel</th></tr></thead>
+        <tbody>
+          <tr><td>Panels statiques</td><td>Effets fixes, effets aléatoires, Hausman, Breusch-Pagan LM, erreurs groupées (cluster).</td><td>Stata · R · EViews</td></tr>
+          <tr><td>Stationnarité</td><td>ADF, Phillips-Perron, KPSS, Zivot-Andrews (rupture), tests de racine unitaire en panel (LLC, IPS).</td><td>EViews · Stata · R</td></tr>
+          <tr><td>Long terme</td><td>Cointégration Johansen, Engle-Granger, VECM, ARDL et test aux bornes de Pesaran.</td><td>EViews · Stata</td></tr>
+          <tr><td>Dynamique</td><td>VAR, fonctions de réponse impulsionnelle, décomposition de variance, causalité de Granger.</td><td>EViews · R</td></tr>
+          <tr><td>Volatilité</td><td>ARCH, GARCH, EGARCH, TGARCH.</td><td>EViews · R · Python</td></tr>
+          <tr><td>Évaluation d'impact</td><td>Différences de différences, appariement sur score de propension, variable instrumentale, régression sur discontinuité.</td><td>Stata · R</td></tr>
+          <tr><td>Choix discret</td><td>Logit et probit sur panel, tobit, modèle de Heckman, comptage Poisson et binomial négatif.</td><td>Stata · SPSS (partiel)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section-contact">
+  <div class="wrap" style="text-align:center">
+    <h2 class="reveal" style="max-width:20ch;margin-inline:auto">Vous ne savez pas quel test s'applique à vos données ?</h2>
+    <p class="intro reveal" style="margin-inline:auto;text-align:center">Envoyez-moi votre question de recherche et la structure de votre fichier. Je vous dis quel test tient, pourquoi, et ce que le jury vous demandera de justifier.</p>
+    <a class="btn btn-wa btn-big reveal" href="https://wa.me/212675992835?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20le%20choix%20du%20test%20statistique." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+      <span>+212 675 99 28 35</span>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 Support Doctorat — Analyse statistique &amp; accompagnement doctoral</span>
+    <span>Chemins de menus vérifiés sur SPSS 27 à 30</span>
+  </div>
+</footer>
+
+<script src="assets/js/tests-data.js"></script>
+<script src="assets/js/tests.js"></script>
+</body>
+</html>
