@@ -1,5 +1,5 @@
 /* =========================================================
-   Mehdi Ammou — comportements du site
+   Support Doctorat — comportements du site
    1. langue (fr / en / ar + RTL)
    2. liens WhatsApp avec message pré-rempli
    3. profondeur : parallaxe de la console, inclinaison des cartes

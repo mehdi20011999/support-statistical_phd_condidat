@@ -1,4 +1,4 @@
-# Mehdi Ammou — Assistance statistique & accompagnement doctoral
+# Support Doctorat — Analyse statistique & accompagnement doctoral
 
 Site vitrine d'une page, trilingue (français / English / العربية), sans dépendance ni build.
 Il suffit d'ouvrir `index.html` : tout fonctionne en local comme en ligne.
@@ -16,21 +16,21 @@ assets/favicon.svg         icône de l'onglet
 
 ## Mettre le site en ligne sur GitHub Pages (gratuit)
 
-1. Créez un dépôt sur GitHub, par exemple `mehdi-ammou`. Cochez **Public**.
+1. Créez un dépôt sur GitHub, par exemple `support-doctorat`. Cochez **Public**.
 2. Bouton **Add file → Upload files**, glissez **le contenu** du dossier
    (`index.html`, le dossier `assets`, `.nojekyll`) — pas le dossier parent lui-même.
 3. **Commit changes**.
 4. Onglet **Settings → Pages**. Sous *Source*, choisissez **Deploy from a branch**,
    branche `main`, dossier `/ (root)`. **Save**.
 5. Attendez une à deux minutes. L'adresse s'affiche en haut de la page :
-   `https://VOTRE-NOM.github.io/mehdi-ammou/`
+   `https://VOTRE-NOM.github.io/support-doctorat/`
 
 > Si le fichier `.nojekyll` n'apparaît pas après l'upload (certains navigateurs
 > masquent les fichiers commençant par un point), créez-le sur GitHub :
 > **Add file → Create new file**, nommez-le `.nojekyll`, laissez-le vide, commit.
 
 ### Nom de domaine personnalisé
-Si vous achetez un domaine (ex. `mehdiammou.ma`) : dans **Settings → Pages → Custom domain**,
+Si vous achetez un domaine (ex. `supportdoctorat.ma`) : dans **Settings → Pages → Custom domain**,
 saisissez-le, puis chez votre registrar créez un enregistrement `CNAME` pointant vers
 `VOTRE-NOM.github.io`. Cochez ensuite **Enforce HTTPS**.
 

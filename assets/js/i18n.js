@@ -7,11 +7,11 @@ window.I18N = {
 /* ============================ FRANÇAIS ============================ */
 fr: {
   meta: {
-    title: "Mehdi Ammou — Assistance statistique & accompagnement doctoral",
+    title: "Support Doctorat — Analyse statistique & accompagnement doctoral",
     desc: "Analyse statistique, méthodologie, rédaction et mise en forme de thèses. Accompagnement des doctorants. Meknès, Maroc."
   },
-  wa: { msg: "Bonjour Mehdi, je vous contacte au sujet de ma thèse." },
-  brand: { name: "Mehdi Ammou", tag: "Assistance statistique" },
+  wa: { msg: "Bonjour, je vous contacte au sujet de ma thèse." },
+  brand: { name: "Support Doctorat", tag: "Analyse statistique" },
   nav: { services: "Prestations", method: "Déroulement", fields: "Domaines", tests: "Catalogue", contact: "Contact" },
   hero: {
     eyebrow: "Meknès, Maroc · à distance partout",
@@ -63,18 +63,18 @@ fr: {
     l1: "WhatsApp", l2: "Téléphone", l3: "Base", v3: "Meknès, Maroc",
     l4: "Travail", v4: "À distance, tout le Maroc", l5: "Langues", l6: "Réponse", v6: "Sous 24 h"
   },
-  foot: { left: "© 2026 Mehdi Ammou — Assistance statistique & accompagnement doctoral", right: "Meknès, Maroc" },
+  foot: { left: "© 2026 Support Doctorat — Analyse statistique & accompagnement doctoral", right: "Meknès, Maroc" },
   float: "WhatsApp"
 },
 
 /* ============================= ENGLISH ============================= */
 en: {
   meta: {
-    title: "Mehdi Ammou — Statistical support & PhD consulting",
+    title: "Support Doctorat — Statistical analysis & PhD support",
     desc: "Statistical analysis, methodology, thesis writing and formatting for doctoral candidates. Meknès, Morocco."
   },
-  wa: { msg: "Hello Mehdi, I am contacting you about my thesis." },
-  brand: { name: "Mehdi Ammou", tag: "Statistical support" },
+  wa: { msg: "Hello, I am contacting you about my thesis." },
+  brand: { name: "Support Doctorat", tag: "Statistics" },
   nav: { services: "Services", method: "How it works", fields: "Fields", tests: "Catalogue", contact: "Contact" },
   hero: {
     eyebrow: "Meknès, Morocco · remote everywhere",
@@ -126,18 +126,18 @@ en: {
     l1: "WhatsApp", l2: "Phone", l3: "Based in", v3: "Meknès, Morocco",
     l4: "Work", v4: "Remote, all of Morocco", l5: "Languages", l6: "Reply", v6: "Within 24 h"
   },
-  foot: { left: "© 2026 Mehdi Ammou — Statistical support & PhD consulting", right: "Meknès, Morocco" },
+  foot: { left: "© 2026 Support Doctorat — Statistical analysis & PhD support", right: "Meknès, Morocco" },
   float: "WhatsApp"
 },
 
 /* ============================= العربية ============================= */
 ar: {
   meta: {
-    title: "مهدي عمو — الدعم الإحصائي ومرافقة الأطروحات",
+    title: "دعم الدكتوراه — التحليل الإحصائي ومرافقة الأطروحات",
     desc: "التحليل الإحصائي، المنهجية، تحرير وإخراج الأطروحات ومرافقة طلبة الدكتوراه. مكناس، المغرب."
   },
   wa: { msg: "السلام عليكم، أتواصل معك بخصوص أطروحتي." },
-  brand: { name: "مهدي عمو", tag: "الدعم الإحصائي" },
+  brand: { name: "دعم الدكتوراه", tag: "التحليل الإحصائي" },
   nav: { services: "الخدمات", method: "سير العمل", fields: "المجالات", tests: "دليل الاختبارات", contact: "اتصل بي" },
   hero: {
     eyebrow: "مكناس، المغرب · عن بُعد في كل مكان",
@@ -189,7 +189,7 @@ ar: {
     l1: "واتساب", l2: "الهاتف", l3: "المقر", v3: "مكناس، المغرب",
     l4: "العمل", v4: "عن بُعد، في كل المغرب", l5: "اللغات", l6: "الرد", v6: "خلال 24 ساعة"
   },
-  foot: { left: "© 2026 مهدي عمو — الدعم الإحصائي ومرافقة الأطروحات", right: "مكناس، المغرب" },
+  foot: { left: "© 2026 دعم الدكتوراه — التحليل الإحصائي ومرافقة الأطروحات", right: "مكناس، المغرب" },
   float: "واتساب"
 }
 
